@@ -1,0 +1,252 @@
+// --- Imports ---------------------------------------------------------------
+// Google font: Roboto
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300,400,500);
+
+// Google font: Lato
+@import url(http://fonts.googleapis.com/css?family=Lato:300,700,900);
+
+// Animations
+@import "animate.css";
+
+// media queries
+@import "_media-queries.scss";
+
+//@import "tablet.scss";
+//@import "desktop.scss";
+
+// --- variables ---------------------------------------------------------------
+// grid variables
+$grid-columns: 12;
+$grid-max-width: 65em;
+
+// breakpoints
+$mq-mobile: 768px;
+$mq-tablet: 1024px;
+
+$res-collection: 320, 480, 768, 1024, 1280, 1680;
+$orientation-collection: all, portrait, landscape;
+$hdpi-collection: 1, 2;
+$hdtv-collection: "720p", "1080", "2K", "4K";
+
+// Color variables
+$black: rgb(14, 14, 14);
+$blue: rgb(65, 131, 215);
+
+// --- building the grid -------------------------------------------------------
+@for $i from 1 through $grid-columns {
+    .column-#{$i} {
+        width: 100% / $grid-columns * $i;
+        margin: 1em 0.7% * $i 1em 0.7% * $i;
+    }
+}
+
+// --- image shapes ------------------------------------------------------------
+.imageShape {
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    line-height: 1.6em;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto';
+    font-weight: 400;
+    color: $black;
+}
+
+body {
+    width: 100%;
+    #wrapper {
+        width: 100%;
+        background-color: rgb(236, 240, 241);
+        header {
+            background: url(../images/header-bg.jpg);
+            height: 65vh;
+            background-size: cover;
+            text-align: center;
+            padding: 35vh 0 0 0;
+            h1 {
+                font-family: 'Lato';
+                color: white;
+                letter-spacing: .2em;
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: .5em 0 0.75em 0;
+                font-size: 3em;
+                font-weight: 900;
+                span {
+                    letter-spacing: .1em;
+                    font-size: .4em;
+                    color: white;
+                    display: block;
+                    font-weight: 100;
+                }
+            }
+        }
+        section {
+            width: 100%;
+            img {
+                @extend .imageShape;
+                width: 10em;
+                height: 10em;
+                display: block;
+                margin: auto;
+            }
+            article {
+                margin: auto;
+                text-align: center;
+                h2 {
+                    text-align: center;
+                    font-size: 2em;
+                    font-weight: 300;
+                    font-family: 'Lato';
+                    margin: 0 0 1em 0;
+                    color: white;
+                    padding: 1.5em 0 1.5em 0;
+                }
+                p {
+                    @extend .column-6;
+                    margin: auto;
+                    font-weight: 300;
+                    letter-spacing: .1em;
+                    padding: 1em 0 0 0;
+                }
+                ul {
+                    li {
+                        @extend .column-2;
+                        display: inline-block;
+                        vertical-align: top;
+                        img {
+                            margin: auto;
+                        }
+                        h3 {
+                            text-align: center;
+                            font-weight: 300;
+                        }
+                        div {
+                            display: none;
+                        }
+                        a {
+                            i {
+                                @extend .imageShape;
+                                font-size: 5em;
+                                opacity: .5;
+                                &.fa-facebook-square {
+                                    color: rgb(60, 90, 153);
+                                }
+                                &.fa-google-plus-square {
+                                    color: rgb(220, 74, 56);
+                                }
+                                &.fa-linkedin-square {
+                                    color: rgb(2, 116, 179);
+                                }
+                                &:hover {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &#about {
+                h2 {
+                    color: $black;
+                    margin: 0 0 0 0;
+                }
+            }
+            &#skills {
+                h2 {
+                    background: url(../images/skills-bg.jpg);
+                    background-size: cover;
+                    background-position: 0 0;
+                }
+            }
+            &#portfolio {
+                h2 {
+                    background: url(../images/portfolio-bg.jpg);
+                    background-size: cover;
+                    background-position: 0 19em;
+                }
+                ul {
+                    li {
+                        &:hover {
+                            cursor: pointer;
+                        }
+                        &.active {
+                            width: 100%;
+                            img {
+                                width: 30em;
+                                height: 30em;
+                                float: left;
+                            }
+                            h3, div, p {
+                                width: 50%;
+                                float: right;
+                            }
+                            h3 {
+                                font-size: 2em;
+                                font-weight: 800;
+                                font-family: 'Lato';
+                                margin: 0 0 1em 0;
+                            }
+                            div {
+                                display: block;
+                                aside, p {
+                                    width: 100%;
+                                }
+                                aside {
+                                    font-weight: 300;
+                                    display: inline;
+                                    &:not(:last-of-type):after {
+                                        content: ' / ';
+                                    }
+                                }
+                                p {
+                                    font-weight: 400;
+                                    padding: 0 2em 0 2em;
+                                }
+                                a {
+                                    display: inherit;
+                                    i {
+                                        margin: .5em 0 0 0;
+                                        background-color: $blue;
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &#social {
+                h2 {
+                    background: url(../images/social-bg.jpg);
+                    background-size: cover;
+                    background-position: 0 13em;
+                }
+            }
+            &:not(:last-of-type) {
+                padding: 0 0 3em 0;
+            }
+        }
+        footer {
+            width: 100%;
+            background-color: $blue;
+            margin: 3em 0 0 0;
+            article {
+                text-align: center;
+                padding: .5em 0 .5em 0;
+                p {
+                    @extend .column-5;
+                    display: inline-block;
+                    a {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

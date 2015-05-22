@@ -1,0 +1,199 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300,400,500);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,700,900);
+@import url(animate.css);
+.column-1 {
+  width: 8.33333%;
+  margin: 1em 0.7% 1em 0.7%; }
+
+.column-2, body #wrapper section article ul li {
+  width: 16.66667%;
+  margin: 1em 1.4% 1em 1.4%; }
+
+.column-3 {
+  width: 25%;
+  margin: 1em 2.1% 1em 2.1%; }
+
+.column-4 {
+  width: 33.33333%;
+  margin: 1em 2.8% 1em 2.8%; }
+
+.column-5, body #wrapper footer article p {
+  width: 41.66667%;
+  margin: 1em 3.5% 1em 3.5%; }
+
+.column-6, body #wrapper section article p {
+  width: 50%;
+  margin: 1em 4.2% 1em 4.2%; }
+
+.column-7 {
+  width: 58.33333%;
+  margin: 1em 4.9% 1em 4.9%; }
+
+.column-8 {
+  width: 66.66667%;
+  margin: 1em 5.6% 1em 5.6%; }
+
+.column-9 {
+  width: 75%;
+  margin: 1em 6.3% 1em 6.3%; }
+
+.column-10 {
+  width: 83.33333%;
+  margin: 1em 7% 1em 7%; }
+
+.column-11 {
+  width: 91.66667%;
+  margin: 1em 7.7% 1em 7.7%; }
+
+.column-12 {
+  width: 100%;
+  margin: 1em 8.4% 1em 8.4%; }
+
+.imageShape, body #wrapper section img, body #wrapper section article ul li a i {
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  line-height: 1.6em;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Roboto';
+  font-weight: 400;
+  color: #0e0e0e; }
+
+body {
+  width: 100%; }
+  body #wrapper {
+    width: 100%;
+    background-color: #ecf0f1; }
+    body #wrapper header {
+      background: url(../images/header-bg.jpg);
+      height: 65vh;
+      background-size: cover;
+      text-align: center;
+      padding: 35vh 0 0 0; }
+      body #wrapper header h1 {
+        font-family: 'Lato';
+        color: white;
+        letter-spacing: .2em;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: .5em 0 0.75em 0;
+        font-size: 3em;
+        font-weight: 900; }
+        body #wrapper header h1 span {
+          letter-spacing: .1em;
+          font-size: .4em;
+          color: white;
+          display: block;
+          font-weight: 100; }
+    body #wrapper section {
+      width: 100%; }
+      body #wrapper section img {
+        width: 10em;
+        height: 10em;
+        display: block;
+        margin: auto; }
+      body #wrapper section article {
+        margin: auto;
+        text-align: center; }
+        body #wrapper section article h2 {
+          text-align: center;
+          font-size: 2em;
+          font-weight: 300;
+          font-family: 'Lato';
+          margin: 0 0 1em 0;
+          color: white;
+          padding: 1.5em 0 1.5em 0; }
+        body #wrapper section article p {
+          margin: auto;
+          font-weight: 300;
+          letter-spacing: .1em;
+          padding: 1em 0 0 0; }
+        body #wrapper section article ul li {
+          display: inline-block;
+          vertical-align: top; }
+          body #wrapper section article ul li img {
+            margin: auto; }
+          body #wrapper section article ul li h3 {
+            text-align: center;
+            font-weight: 300; }
+          body #wrapper section article ul li div {
+            display: none; }
+          body #wrapper section article ul li a i {
+            font-size: 5em;
+            opacity: .5; }
+            body #wrapper section article ul li a i.fa-facebook-square {
+              color: #3c5a99; }
+            body #wrapper section article ul li a i.fa-google-plus-square {
+              color: #dc4a38; }
+            body #wrapper section article ul li a i.fa-linkedin-square {
+              color: #0274b3; }
+            body #wrapper section article ul li a i:hover {
+              opacity: 1; }
+      body #wrapper section#about h2 {
+        color: #0e0e0e;
+        margin: 0 0 0 0; }
+      body #wrapper section#skills h2 {
+        background: url(../images/skills-bg.jpg);
+        background-size: cover;
+        background-position: 0 0; }
+      body #wrapper section#portfolio h2 {
+        background: url(../images/portfolio-bg.jpg);
+        background-size: cover;
+        background-position: 0 19em; }
+      body #wrapper section#portfolio ul li:hover {
+        cursor: pointer; }
+      body #wrapper section#portfolio ul li.active {
+        width: 100%; }
+        body #wrapper section#portfolio ul li.active img {
+          width: 30em;
+          height: 30em;
+          float: left; }
+        body #wrapper section#portfolio ul li.active h3, body #wrapper section#portfolio ul li.active div, body #wrapper section#portfolio ul li.active p {
+          width: 50%;
+          float: right; }
+        body #wrapper section#portfolio ul li.active h3 {
+          font-size: 2em;
+          font-weight: 800;
+          font-family: 'Lato';
+          margin: 0 0 1em 0; }
+        body #wrapper section#portfolio ul li.active div {
+          display: block; }
+          body #wrapper section#portfolio ul li.active div aside, body #wrapper section#portfolio ul li.active div p {
+            width: 100%; }
+          body #wrapper section#portfolio ul li.active div aside {
+            font-weight: 300;
+            display: inline; }
+            body #wrapper section#portfolio ul li.active div aside:not(:last-of-type):after {
+              content: ' / '; }
+          body #wrapper section#portfolio ul li.active div p {
+            font-weight: 400;
+            padding: 0 2em 0 2em; }
+          body #wrapper section#portfolio ul li.active div a {
+            display: inherit; }
+            body #wrapper section#portfolio ul li.active div a i {
+              margin: .5em 0 0 0;
+              background-color: #4183d7;
+              color: white; }
+      body #wrapper section#social h2 {
+        background: url(../images/social-bg.jpg);
+        background-size: cover;
+        background-position: 0 13em; }
+      body #wrapper section:not(:last-of-type) {
+        padding: 0 0 3em 0; }
+    body #wrapper footer {
+      width: 100%;
+      background-color: #4183d7;
+      margin: 3em 0 0 0; }
+      body #wrapper footer article {
+        text-align: center;
+        padding: .5em 0 .5em 0; }
+        body #wrapper footer article p {
+          display: inline-block; }
+          body #wrapper footer article p a {
+            color: white; }
+
+/*# sourceMappingURL=main.css.map */
