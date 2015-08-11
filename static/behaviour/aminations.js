@@ -4,7 +4,7 @@ var signature = document.querySelectorAll('#signature ul')[0];
 
 var i;
 
-// The header image needs to pulse after 1 second
+// The header image needs to animate after 1 second
 setTimeout(function() {
 	me.classList.remove('hidden');
 	me.classList.add('fadeInDown');

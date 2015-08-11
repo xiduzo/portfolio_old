@@ -13,7 +13,7 @@
 			}
 
 			// Switch the portfolio item
-			portfolio.items.switchItem('next');
+			portfolio.items.animate('next');
 		},
 		// Show previous item
 		showPrevious: function() {
