@@ -32,7 +32,7 @@
 				});
 			}
 
-			portfolio.items.switchItem();
+			portfolio.items.animate();
 			portfolio.items.displayItem(JSON.parse(portfolioItems));
 		}
 	}	
