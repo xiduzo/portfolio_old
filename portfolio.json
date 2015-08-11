@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "image": "samenhuishouden.jpg",
+        "title": "Samen huishouden",
+        "link": "http://samenhuishouden.nl/",
+        "more": "READ MORE LINK",
+        "paragraphs": [
+            "Samen huishouden is een van mijn projecten waar ik buiten school mee bezig ben.",
+            "Sinds ik op mezelf woon met medestudenten merkte ik pas hoe vervelend het was om in een huishouden alle taken soepel te verdelen.",
+            "Dit is een van de redene dat ik samen huishouden ben gaan maken.",
+            "Buiten dat om vond ik het ook een goed idee en vond het leuk om mijn kennis toe te passen voor iets buiten school om."
+        ]
+    },
+    {
+        "id": 2,
+        "image": "programmeren.jpg",
+        "title": "Programmeren",
+        "link": "http://sanderboer.nl/school/deeltoets3/",
+        "more": "READ MORE LINK",
+        "paragraphs": [
+            "Voor mijn eerste jaars vak programmeren werd de opdracht gesteld van het maken van een overdraagbare applicatie met Javascript.",
+            "Aan het begin begon ik met nul kennis over javaScript maar ik vond het een erg interessante taal, hierdoor ben ik iets over de top gegaan met mijn eindopracht.",
+            "Voor mijn eindopdracht heb een text based adventure gemaakt waarin je door kamers kunt rondlopen, items kunt kopen, items kunt vinden en nog veel meer.",
+            "Lukt het jou om het uit te spelen?"
+        ]
+    },
+    {
+        "id": 3,
+        "image": "mytable.jpg",
+        "title": "Mijn werkplek",
+        "link": "http://sanderboer.nl/school/images/werkplek.jpg",
+        "more": "READ MORE LINK",
+        "paragraphs": [
+            "Aangezien wij op school in een schoolse cultuur leefde was ik in groepsprojecten bija altijd de front ender, hierdoor heb ik minder kunnen spelen met programma's als illustrator.",
+            "Om toch een beetje feeling te krijgen met deze programma's ben ik buiten school om ook bezig om hierin dingen te maken.",
+            "Dit is een van de dingen die ik heb gemaakt buiten school om. Mij eigen werkplek in illustrator!"
+        ]
+    },
+    {
+        "id": 4,
+        "image": "1kchallenge.jpg",
+        "title": "1k challenge",
+        "link": "http://sanderboer.nl/school/tic-tac-toe/",
+        "more": "READ MORE LINK",
+        "paragraphs": [
+            "Tijdens mijn derde jaar op CMD ben ik mee gaan lopen als student assisten met het propedeuse vak programmeren.",
+            "Dit vak gaf eerste jaars CMD-ers de eerste stappen in programmeren / javaScript.",
+            "Buiten de lessen om wilde ik kijken hoever mijn kennis was gegroeid sinds dat ik het vak (twee jaar hiervoor) volgde.",
+            "Ik ben zo ver gegaan dat ik een spel met minder dan 1024 tekens heb geschreven."
+        ]
+    },
+    {
+        "id": 5,
+        "image": "perspective.jpg",
+        "title": "Perspectief tekenen",
+        "link": "http://sanderboer.nl/school/images/2punts2.jpg",
+        "more": "READ MORE LINK",
+        "paragraphs": [
+            "Tijdens mijn minor game design heb ik het vak 'Game art' gevold.",
+            "In dit vak hebben wij onderandere geleerd om met de perspectief tool aan de slag te gaan,",
+            "Dit is een van de ontwerpen die ik heb gemaakt met de perspectief tool."
+        ]
+    },
+    {
+        "id": 6,
+        "image": "woonenergie.jpg",
+        "title": "Woonenergie / Tam Tam applicatie",
+        "link": "http://sanderboer.nl/school/project/",
+        "more": "READ MORE LINK",
+        "paragraphs": [
+            "In opdracht van Tam Tam moesten wij een (interactieve) digitale toepassing maken voor WoonEnergie, deze toepassing moest een relevante meerwaarde brengen in het leven van de klanten van WoonEnergie.",
+            "Bij de toepassing draaide het vooral om het geven van inzicht in het verbruik en het bieden van service richting huurder en wooncorporaties.",
+            "Door middel van relevantie wilde wij dat de drempel verlaagd werd voor het gebruik van deze digitale toepassing, en hierdoor hoopt WoonEnergie betere touchpoints te krijgen met klanten."
+        ]
+    },
+    {
+        "id": 7,
+        "image": "dataviz.jpg",
+        "title": "Datavisualisatie",
+        "link": "http://sanderboer.nl/school/dataviz/eindopdracht/",
+        "more": "READ MORE LINK",
+        "paragraphs": [
+            "Hoe breng ik grote brokken data zo aan de gebruiker dat deze begrijpbaar is?",
+            "Voor mijn datavisualisatie heb ik gekozen om mijn gamegedrag op bepaalde punten bij te houden tijdens het spelen van Dota 2.",
+            "Door middel van datavisualisatie wilde ik op een gebruiksvriendelijke manier afbeelden wat invloed had op een potje winnen of verliezen."
+        ]
+    },
+    {
+        "id": 8,
+        "image": "FED.jpg",
+        "title": "Front end development",
+        "link": "http://sanderboer.nl/school/FED/",
+        "more": "READ MORE LINK",
+        "paragraphs": [
+            "Voor front end development was het doel het maken van toegankelijke websites die op verschillende schermen bruikbaar zijn met behulp van HTML5 CSS3 en jQuery.",
+            "Dit was mijn eerste instap in HTML5 en CSS3 en de mogenlijkheden hiervan."
+        ]
+    },
+    {
+        "id": 9,
+        "image": "FED2.jpg",
+        "title": "Front end development 2",
+        "link": "http://sanderboer.nl/school/FED2/",
+        "more": "READ MORE LINK",
+        "paragraphs": [
+            "Tijdens front end development 2 hebben wij een verdieping in de technische mogelijkheden van HTML5 en Javascript gekregen.",
+            "De focus van dit vak lag op programmeer patronen OOP en MVC.",
+            "Door middel van libraries en de programeer principes die hierboven zijn genoemd moesten wij een klein appje maken."
+        ]
+    }
+]

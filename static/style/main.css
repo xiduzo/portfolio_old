@@ -1,55 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,300,400,500);
 @import url(http://fonts.googleapis.com/css?family=Lato:300,700,900);
 @import url(animate.css);
-.column-1 {
-  width: 8.33333%;
-  margin: 1em 0.7% 1em 0.7%; }
-
-.column-2, body #wrapper section article ul li {
-  width: 16.66667%;
-  margin: 1em 1.4% 1em 1.4%; }
-
-.column-3 {
-  width: 25%;
-  margin: 1em 2.1% 1em 2.1%; }
-
-.column-4 {
-  width: 33.33333%;
-  margin: 1em 2.8% 1em 2.8%; }
-
-.column-5, body #wrapper footer article p {
-  width: 41.66667%;
-  margin: 1em 3.5% 1em 3.5%; }
-
-.column-6, body #wrapper section article p {
-  width: 50%;
-  margin: 1em 4.2% 1em 4.2%; }
-
-.column-7 {
-  width: 58.33333%;
-  margin: 1em 4.9% 1em 4.9%; }
-
-.column-8 {
-  width: 66.66667%;
-  margin: 1em 5.6% 1em 5.6%; }
-
-.column-9 {
-  width: 75%;
-  margin: 1em 6.3% 1em 6.3%; }
-
-.column-10 {
-  width: 83.33333%;
-  margin: 1em 7% 1em 7%; }
-
-.column-11 {
-  width: 91.66667%;
-  margin: 1em 7.7% 1em 7.7%; }
-
-.column-12 {
-  width: 100%;
-  margin: 1em 8.4% 1em 8.4%; }
-
-.imageShape, body #wrapper section img, body #wrapper section article ul li a i {
+.imageShape, body #wrapper header img, body #wrapper section#signature ul li article i, body #wrapper section#portfolio div i, body #wrapper section#social ul li a i, body #wrapper section img, body #wrapper section article ul li a i {
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
 
@@ -57,143 +9,292 @@
   margin: 0;
   padding: 0;
   font-size: 1em;
-  line-height: 1.6em;
+  line-height: 1.563em;
   text-decoration: none;
   list-style: none;
+  color: #0e0e0e;
   font-family: 'Roboto';
-  font-weight: 400;
-  color: #0e0e0e; }
+  font-weight: 300; }
 
-body {
-  width: 100%; }
-  body #wrapper {
-    width: 100%;
-    background-color: #ecf0f1; }
-    body #wrapper header {
-      background: url(../images/header-bg.jpg);
-      height: 65vh;
-      background-size: cover;
-      text-align: center;
-      padding: 35vh 0 0 0; }
-      body #wrapper header h1 {
-        font-family: 'Lato';
-        color: white;
-        letter-spacing: .2em;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: .5em 0 0.75em 0;
-        font-size: 3em;
-        font-weight: 900; }
-        body #wrapper header h1 span {
-          letter-spacing: .1em;
-          font-size: .4em;
-          color: white;
-          display: block;
-          font-weight: 100; }
-    body #wrapper section {
-      width: 100%; }
-      body #wrapper section img {
-        width: 10em;
-        height: 10em;
-        display: block;
-        margin: auto; }
-      body #wrapper section article {
-        margin: auto;
-        text-align: center; }
-        body #wrapper section article h2 {
-          text-align: center;
-          font-size: 2em;
-          font-weight: 300;
-          font-family: 'Lato';
-          margin: 0 0 1em 0;
-          color: white;
-          padding: 1.5em 0 1.5em 0; }
-        body #wrapper section article p {
-          margin: auto;
-          font-weight: 300;
-          letter-spacing: .1em;
-          padding: 1em 0 0 0; }
-        body #wrapper section article ul li {
-          display: inline-block;
-          vertical-align: top; }
-          body #wrapper section article ul li img {
-            margin: auto; }
-          body #wrapper section article ul li h3 {
-            text-align: center;
-            font-weight: 300; }
-          body #wrapper section article ul li div {
-            display: none; }
-          body #wrapper section article ul li a i {
-            font-size: 5em;
-            opacity: .5; }
-            body #wrapper section article ul li a i.fa-facebook-square {
-              color: #3c5a99; }
-            body #wrapper section article ul li a i.fa-google-plus-square {
-              color: #dc4a38; }
-            body #wrapper section article ul li a i.fa-linkedin-square {
-              color: #0274b3; }
-            body #wrapper section article ul li a i:hover {
-              opacity: 1; }
-      body #wrapper section#about h2 {
-        color: #0e0e0e;
-        margin: 0 0 0 0; }
-      body #wrapper section#skills h2 {
-        background: url(../images/skills-bg.jpg);
-        background-size: cover;
-        background-position: 0 0; }
-      body #wrapper section#portfolio h2 {
-        background: url(../images/portfolio-bg.jpg);
-        background-size: cover;
-        background-position: 0 19em; }
-      body #wrapper section#portfolio ul li:hover {
-        cursor: pointer; }
-      body #wrapper section#portfolio ul li.active {
-        width: 100%; }
-        body #wrapper section#portfolio ul li.active img {
-          width: 30em;
-          height: 30em;
-          float: left; }
-        body #wrapper section#portfolio ul li.active h3, body #wrapper section#portfolio ul li.active div, body #wrapper section#portfolio ul li.active p {
-          width: 50%;
-          float: right; }
-        body #wrapper section#portfolio ul li.active h3 {
-          font-size: 2em;
-          font-weight: 800;
-          font-family: 'Lato';
-          margin: 0 0 1em 0; }
-        body #wrapper section#portfolio ul li.active div {
-          display: block; }
-          body #wrapper section#portfolio ul li.active div aside, body #wrapper section#portfolio ul li.active div p {
-            width: 100%; }
-          body #wrapper section#portfolio ul li.active div aside {
-            font-weight: 300;
-            display: inline; }
-            body #wrapper section#portfolio ul li.active div aside:not(:last-of-type):after {
-              content: ' / '; }
-          body #wrapper section#portfolio ul li.active div p {
-            font-weight: 400;
-            padding: 0 2em 0 2em; }
-          body #wrapper section#portfolio ul li.active div a {
-            display: inherit; }
-            body #wrapper section#portfolio ul li.active div a i {
-              margin: .5em 0 0 0;
-              background-color: #4183d7;
-              color: white; }
-      body #wrapper section#social h2 {
-        background: url(../images/social-bg.jpg);
-        background-size: cover;
-        background-position: 0 13em; }
-      body #wrapper section:not(:last-of-type) {
-        padding: 0 0 3em 0; }
-    body #wrapper footer {
-      width: 100%;
-      background-color: #4183d7;
-      margin: 3em 0 0 0; }
-      body #wrapper footer article {
+h1, h2, h3, h4 {
+  font-family: 'Lato'; }
+
+h2 {
+  font-weight: 900;
+  font-size: 2em;
+  letter-spacing: 0.2em; }
+
+h3 {
+  font-size: 1.3em;
+  font-weight: 700;
+  letter-spacing: .1em; }
+
+body #wrapper header {
+  height: 100vh;
+  background-image: url("../images/header-bg.jpg");
+  background-size: cover; }
+  body #wrapper header img.hidden {
+    opacity: 0; }
+  @media only screen and (max-width: 672px) {
+    body #wrapper header img {
+      width: 30vw;
+      height: 30vw;
+      margin: 20vh 0 0 35vw; } }
+  @media only screen and (min-width: 673px) and (max-width: 1023px) {
+    body #wrapper header img {
+      width: 25vw;
+      height: 25vw;
+      margin: 20vh 0 0 37.5vw; } }
+  @media only screen and (min-width: 1024px) {
+    body #wrapper header img {
+      width: 20vw;
+      height: 20vw;
+      margin: 20vh 0 0 40vw; } }
+  body #wrapper header h1 {
+    color: white;
+    text-align: center;
+    background-color: rgba(14, 14, 14, 0.5);
+    margin: 5vh 0 0 0;
+    padding: 4vh 0 4vh 0;
+    font-weight: 900;
+    font-size: 1.5em;
+    letter-spacing: .2em; }
+    body #wrapper header h1 span {
+      color: white;
+      display: inherit;
+      font-size: .7em;
+      letter-spacing: normal; }
+body #wrapper section {
+  padding: 3em 0 3em 0; }
+  body #wrapper section article {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 1em 1em 1em 1em; }
+    body #wrapper section article h2 {
+      color: white; }
+    body #wrapper section article p {
+      color: white; }
+  body #wrapper section#signature {
+    background-color: #52b3d9; }
+    body #wrapper section#signature ul {
+      margin: 1em 0 0 0; }
+      body #wrapper section#signature ul li {
+        display: inline-block;
         text-align: center;
-        padding: .5em 0 .5em 0; }
-        body #wrapper footer article p {
-          display: inline-block; }
-          body #wrapper footer article p a {
-            color: white; }
+        vertical-align: top; }
+        @media only screen and (max-width: 672px) {
+          body #wrapper section#signature ul li {
+            width: 100vw; } }
+        @media only screen and (min-width: 673px) and (max-width: 1023px) {
+          body #wrapper section#signature ul li {
+            width: 49vw; } }
+        @media only screen and (min-width: 1024px) {
+          body #wrapper section#signature ul li {
+            width: 32vw; } }
+        body #wrapper section#signature ul li article i {
+          color: white;
+          font-size: 3em;
+          margin: 0 0 .3em 0;
+          background-color: black;
+          padding: 1em; }
+        body #wrapper section#signature ul li article h3 {
+          padding: .2em 0 .2em 0;
+          color: white; }
+        body #wrapper section#signature ul li article p {
+          width: 80%;
+          color: white;
+          margin: auto; }
+          @media only screen and (max-width: 672px) {
+            body #wrapper section#signature ul li article p {
+              width: 100%; } }
+          @media only screen and (min-width: 673px) and (max-width: 1023px) {
+            body #wrapper section#signature ul li article p {
+              width: 90%; } }
+          @media only screen and (min-width: 1024px) {
+            body #wrapper section#signature ul li article p {
+              width: 80%; } }
+  body #wrapper section#portfolio {
+    background-color: #d24d57; }
+    body #wrapper section#portfolio div {
+      position: absolute;
+      z-index: 2; }
+      body #wrapper section#portfolio div i {
+        color: white;
+        background-color: rgba(14, 14, 14, 0.5);
+        font-size: 1.3em;
+        position: relative; }
+        @media only screen and (max-width: 672px) {
+          body #wrapper section#portfolio div i {
+            top: 6vh; } }
+        @media only screen and (min-width: 673px) and (max-width: 1023px) {
+          body #wrapper section#portfolio div i {
+            top: 18vw; } }
+        @media only screen and (min-width: 1024px) {
+          body #wrapper section#portfolio div i {
+            top: 30vh; } }
+        body #wrapper section#portfolio div i.fa-angle-left {
+          padding: 1em 1.2em 1em 1em;
+          left: 1vw; }
+        body #wrapper section#portfolio div i.fa-angle-right {
+          padding: 1em 1em 1em 1.2em; }
+          @media only screen and (max-width: 672px) {
+            body #wrapper section#portfolio div i.fa-angle-right {
+              left: 82vw; } }
+          @media only screen and (min-width: 673px) and (max-width: 1023px) {
+            body #wrapper section#portfolio div i.fa-angle-right {
+              left: 89vw; } }
+          @media only screen and (min-width: 1024px) {
+            body #wrapper section#portfolio div i.fa-angle-right {
+              left: 94vw; } }
+      body #wrapper section#portfolio div:hover {
+        cursor: pointer; }
+    body #wrapper section#portfolio section {
+      padding: 5vw 6vw 0 6vw;
+      min-height: 50vh; }
+      @media only screen and (max-width: 672px) {
+        body #wrapper section#portfolio section img {
+          width: 30vw;
+          height: 30vw;
+          margin: 0 0 0 30vw; } }
+      @media only screen and (min-width: 673px) and (max-width: 1023px) {
+        body #wrapper section#portfolio section img {
+          width: 27.5vw;
+          height: 27.5vw;
+          margin: 5em 2em 5em 3em;
+          float: left; } }
+      @media only screen and (min-width: 1024px) {
+        body #wrapper section#portfolio section img {
+          width: 25vw;
+          height: 25vw;
+          margin: 0 7em 5em 3em;
+          float: left; } }
+      body #wrapper section#portfolio section h3 {
+        color: white; }
+        @media only screen and (max-width: 672px) {
+          body #wrapper section#portfolio section h3 {
+            width: 100%;
+            text-align: center; } }
+        @media only screen and (min-width: 673px) and (max-width: 1023px) {
+          body #wrapper section#portfolio section h3 {
+            width: 49%;
+            vertical-align: top;
+            display: inline-block; } }
+        @media only screen and (min-width: 1024px) {
+          body #wrapper section#portfolio section h3 {
+            width: 49%;
+            vertical-align: top;
+            display: inline-block; } }
+      body #wrapper section#portfolio section p {
+        color: white;
+        padding: .2em 0 .2em 0; }
+        @media only screen and (max-width: 672px) {
+          body #wrapper section#portfolio section p {
+            width: 100%; } }
+        @media only screen and (min-width: 673px) and (max-width: 1023px) {
+          body #wrapper section#portfolio section p {
+            width: 50%;
+            float: left; } }
+        @media only screen and (min-width: 1024px) {
+          body #wrapper section#portfolio section p {
+            display: inline-block;
+            width: 50%; } }
+      body #wrapper section#portfolio section a {
+        display: inline-block;
+        background-color: #ececec;
+        padding: 1em 1em 1em 1em;
+        text-align: center;
+        margin: 1em 1em 0 0;
+        font-weight: 400; }
+        @media only screen and (max-width: 672px) {
+          body #wrapper section#portfolio section a {
+            width: 89%; } }
+        @media only screen and (min-width: 673px) and (max-width: 1023px) {
+          body #wrapper section#portfolio section a {
+            width: 89%; } }
+        @media only screen and (min-width: 1024px) {
+          body #wrapper section#portfolio section a {
+            width: 20%; } }
+        body #wrapper section#portfolio section a:hover {
+          background-color: #2ecc71;
+          color: white; }
+  body #wrapper section#social {
+    background-image: url("../images/social-bg.jpg");
+    background-size: cover; }
+    @media only screen and (min-width: 1024px) {
+      body #wrapper section#social {
+        background-position-y: 34em; } }
+    @media only screen and (max-width: 672px) {
+      body #wrapper section#social ul {
+        margin: 0 0 0 0; } }
+    @media only screen and (min-width: 673px) and (max-width: 1023px) {
+      body #wrapper section#social ul {
+        margin: 1em 0 0 0; } }
+    @media only screen and (min-width: 1024px) {
+      body #wrapper section#social ul {
+        margin: 1em 0 0 0; } }
+    body #wrapper section#social ul li {
+      width: 32%;
+      display: inline-block;
+      text-align: center;
+      vertical-align: top; }
+      body #wrapper section#social ul li a i {
+        color: white;
+        margin: 0 0 .3em 0;
+        background-color: black;
+        padding: 1em; }
+        @media only screen and (max-width: 672px) {
+          body #wrapper section#social ul li a i {
+            font-size: 2em; } }
+        @media only screen and (min-width: 673px) and (max-width: 1023px) {
+          body #wrapper section#social ul li a i {
+            font-size: 2.5em; } }
+        @media only screen and (min-width: 1024px) {
+          body #wrapper section#social ul li a i {
+            font-size: 3em; } }
+        body #wrapper section#social ul li a i.fa-linkedin {
+          color: #3c5a99; }
+        body #wrapper section#social ul li a i.fa-github {
+          color: #dc4a38; }
+        body #wrapper section#social ul li a i.fa-facebook {
+          color: #0274b3; }
+body #wrapper footer {
+  padding: 3em 0 3em 0;
+  background-color: #2ecc71; }
+  body #wrapper footer article {
+    margin: auto;
+    text-align: center;
+    padding: 1em 1em 1em 1em; }
+    @media only screen and (max-width: 672px) {
+      body #wrapper footer article {
+        width: 90%; } }
+    @media only screen and (min-width: 673px) and (max-width: 1023px) {
+      body #wrapper footer article {
+        width: 90%; } }
+    @media only screen and (min-width: 1024px) {
+      body #wrapper footer article {
+        width: 80%; } }
+    body #wrapper footer article h2 {
+      color: white; }
+    body #wrapper footer article p {
+      color: white; }
+  body #wrapper footer ul {
+    display: inline-block;
+    text-align: center;
+    margin: 1em 0 0 0; }
+    @media only screen and (max-width: 672px) {
+      body #wrapper footer ul {
+        width: 100vw; } }
+    @media only screen and (min-width: 673px) and (max-width: 1023px) {
+      body #wrapper footer ul {
+        width: 49vw; } }
+    @media only screen and (min-width: 1024px) {
+      body #wrapper footer ul {
+        width: 49vw; } }
+    body #wrapper footer ul li {
+      color: white;
+      padding: .2em 0 .2em 0; }
+      body #wrapper footer ul li i {
+        color: white; }
 
 /*# sourceMappingURL=main.css.map */

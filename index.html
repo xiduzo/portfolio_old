@@ -8,6 +8,7 @@
 	<meta name="description" content="Portfolio website front end developer Sander Boer">
 	<meta name="keywords" content="Portfolio website, portfolio, front end developer, hogeschool van amsterdam, HvA, CMD, communication and multimedia design">
 	<meta name="author" content="Sander Boer">
+	<meta name="viewport" content="width=divice-width, initial-scale=1">
 
 	<link rel="stylesheet" href="static/style/main.css">
 	<!-- font awesome -->
@@ -17,6 +18,7 @@
 <body>
 	<div id="wrapper">
 		<header>
+			<img src="static/images/ik.jpg" alt="This is me" class="hidden animated">
 			<h1>
 				Sander Boer
 				<span>
@@ -24,329 +26,136 @@
 				</span>
 			</h1>
 		</header>
-		<section id="about">
+		<section id="signature">
 			<article>
-				<h2>Over mij</h2>
-				<img src="static/images/ik.jpg" alt="dit ben ik">
-				<p>
-					Hallo wereld! Ik ben Sander Boer, een derdejaars CMD (Communication and Multimedia Design) student aan de Hogeschool van Amsterdam.
-				</p>
-				<p>
-					Binnen CMD heb ik mij vooral gefocust op de front end development. Bij front end development ligt dan ook mijn passie maar hiernaast ben ik ook zeer ge&iuml;nteresseerd in visual- en UX design.
-				</p>
-				<p>
-					Naast mijn studie vind ik het leuk om voor mezelf kleine projecten op te starten. Deze projecten zijn vaak om ergens verdieping in te vinden maar ook om nieuwe dingen te leren / proberen.
-				</p>
-			</article>
-		</section>
-
-		<section id="skills">
-			<article>	
 				<h2>
-					Skills
+					Mijn visie
 				</h2>
-				<ul>
-					<li>
-						<img src="static/images/skills/html5.jpg" alt="HTML 5" class="animated">
-						<h3>HTML 5</h3>
-					</li>
-					<li>
-						<img src="static/images/skills/css3.jpg" alt="CSS 3" class="animated">
-						<h3>CSS 3</h3>
-					</li>
-					<li>
-						<img src="static/images/skills/js.jpg" alt="javaSript" class="animated">
-						<h3>javaScript</h3>
-					</li>
-					<li>
-						<img src="static/images/skills/php.jpg" alt="PHP" class="animated">
-						<h3>PHP</h3>
-					</li>
-					<li>
-						<img src="static/images/skills/sql.jpg" alt="SQL" class="animated">
-						<h3>SQL</h3>
-					</li>
-					<li>
-						<img src="static/images/skills/ai.jpg" alt="Adobe Illustrator" class="animated">
-						<h3>Illustrator</h3>
-					</li>
-					<li>
-						<img src="static/images/skills/ps.jpg" alt="Adobe Photoshop" class="animated">
-						<h3>Photoshop</h3>
-					</li>
-				</ul>
+				<p>
+					Als front end developver houd ik me met meer bezig dan alleen met de techniek. Ik ben van mening dat een goede front ender verder kijkt dan alleen techniek. Door middel van perfectionisme en klantgericht denken krijg je naar mijn mening een mooier en beter eindproduct.
+				</p>
 			</article>
+			<ul>
+				<li class="animated">
+					<article>
+						<i class="fa fa-arrows"></i>
+						<h3>Pixel perfect</h3>
+						<p>
+							Schoonheid wint, altijd. Wat er mooi uit ziet, werkt beter. De uitstraling van een product is wat een product nog sterker kan neerzetten.
+						</p>
+					</article>
+				</li>
+				<li class="animated">
+					<article>
+						<i class="fa fa-users"></i>
+						<h3>User centered</h3>
+						<p>
+							Ijs verkopen aan ijsberen heeft geen zin. Een product maak je uiteindelijk niet voor jezelf maar voor de eindgebruiker, dit vind ik belangerijk.
+						</p>
+					</article>
+				</li>
+				<li class="animated">
+					<article>
+						<i class="fa fa-leaf"></i>
+						<h3>Clean</h3>
+						<p>
+							Een fiets met te veel toeters en bellen fiets niet lekker. Een sterk product is simpel van aard, niemand zit te wachten op die fiets met 3 bellen.
+						</p>
+					</article>
+				</li>
+			</ul>
 		</section>
-
 		<section id="portfolio">
 			<article>
 				<h2>Mijn werk</h2>
-				<ul>
-					<li class="animated">
-						<img src="static/images/portfolio/FED2.jpg" alt="" class="animated">
-						<h3 class="animated">Front End Development 2</h3>
-						<div class="animated">
-							<aside>
-								2014
-							</aside>
-							<aside>
-								Individueel project
-							</aside>
-							<aside>
-								Studiejaar 3
-							</aside>
-							<p>
-								Verdieping in de technische mogelijkheden van HTML5 en Javascript. Focus op programmeer patronen OOP en MVC.
-							</p>
-							<a href="http://sanderboer.nl/school/FED2/" target="_BLANK">
-								<i class="fa fa-link"></i>
-							</a>
-						</div>
-					</li>
-					<li class="animated">
-						<img src="static/images/portfolio/dataviz.jpg" alt="" class="animated">
-						<h3>Datavisualisatie</h3>
-						<div class="animated">
-							<aside>
-								2014
-							</aside>
-							<aside>
-								Individueel project
-							</aside>
-							<aside>
-								Studiejaar 3
-							</aside>
-							<p>
-								Abstracte informatie inzichtelijk maken door middel van een dynamische grafische weergave.
-							</p>
-							<a href="http://sanderboer.nl/school/dataviz/eindopdracht/" target="_BLANK">
-								<i class="fa fa-link"></i>
-							</a>
-						</div>
-					</li>
-					<li class="animated">
-						<img src="static/images/portfolio/woonenergie.jpg" alt="" class="animated">
-						<h3>Woonenergie</h3>
-						<div class="animated">
-							<aside>
-								2014 - 2015
-							</aside>
-							<aside>
-								Groeps project
-							</aside>
-							<aside>
-								Studiejaar 3
-							</aside>
-							<p>
-								Een applicatie die de gebruiker inzicht geeft in zijn engergie verbruik.
-							</p>
-							<a href="http://sanderboer.nl/school/project/logout.php" target="_BLANK">
-								<i class="fa fa-link"></i>
-							</a>
-						</div>
-					</li>
-					<li class="animated">
-						<img src="static/images/portfolio/perspective.jpg" alt="" class="animated">
-						<h3>Illustrator - perspectief</h3>
-						<div class="animated">
-							<aside>
-								2015
-							</aside>
-							<aside>
-								Individueel project
-							</aside>
-							<aside>
-								Studiejaar 3
-							</aside>
-							<p>
-								In illustrator om leren gaan met de perspectiefs tool.
-							</p>
-							<a href="http://sanderboer.nl/school/images/2punts2.jpg" target="_BLANK">
-								<i class="fa fa-link"></i>
-							</a>
-						</div>
-					</li>
-					<li class="animated">
-						<img src="static/images/portfolio/samenhuishouden.jpg" alt="" class="animated">
-						<h3>Samen huishouden</h3>
-						<div class="animated">
-							<aside>
-								2015
-							</aside>
-							<aside>
-								Eigen project
-							</aside>
-							<p>
-								Samen simpel en eerlijk je huishouden regelen.
-							</p>
-							<a href="http://samenhuishouden.nl/" target="_BLANK">
-								<i class="fa fa-link"></i>
-							</a>
-						</div>
-					</li>
-					<li class="animated">
-						<img src="static/images/portfolio/1kchallenge.jpg" alt="" class="animated">
-						<h3>JS - 1k challenge</h3>
-						<div class="animated">
-							<aside>
-								2014
-							</aside>
-							<aside>
-								Verdieping programmeren
-							</aside>
-							<p>
-								Een programma (spel) zo effectief schrijven dat het in 1024 tekens speelbaar is.
-							</p>
-							<a href="http://sanderboer.nl/school/tic-tac-toe/" target="_BLANK">
-								<i class="fa fa-link"></i>
-							</a>
-						</div>
-					</li>
-					<li class="animated">
-						<img src="static/images/portfolio/mytable.jpg" alt="" class="animated">
-						<h3>Illustrator - werkplek</h3>
-						<div class="animated">
-							<aside>
-								2015
-							</aside>
-							<aside>
-								Verbreding illustrator
-							</aside>
-							<p>
-								Mijn eigen werkplek nagemaak in illustrator
-							</p>
-							<a href="http://sanderboer.nl/school/images/werkplek.jpg" target="_BLANK">
-								<i class="fa fa-link"></i>
-							</a>
-						</div>
-					</li>
-					<li class="animated">
-						<img src="static/images/portfolio/FED.jpg" alt="" class="animated">
-						<h3>Front End Development</h3>
-						<div class="animated">
-							<aside>
-								2013
-							</aside>
-							<aside>
-								Individueel project
-							</aside>
-							<aside>
-								Studiejaar 2
-							</aside>
-							<p>
-								HTML5 elementen, formulieren, CSS3 effecten, CSS selectors, Javascript classList object, Flexbox, Untis, pixels, em, procenten, Box model, Positioning, Responsive design, media queries, Picture element en feature detection.
-							</p>
-							<a href="http://sanderboer.nl/school/FED/" target="_BLANK">
-								<i class="fa fa-link"></i>
-							</a>
-						</div>
-					</li>
-					<li class="animated">
-						<img src="static/images/portfolio/programmeren.jpg" alt="" class="animated">
-						<h3>Programmeren</h3>
-						<div class="animated">
-							<aside>
-								2012
-							</aside>
-							<aside>
-								Individueel project
-							</aside>
-							<aside>
-								Studiejaar 1
-							</aside>
-							<p>
-								Het maken van een overdraagbare applicatie met Javascript.
-							</p>
-							<a href="http://sanderboer.nl/school/deeltoets3/" target="_BLANK">
-								<i class="fa fa-link"></i>
-							</a>
-						</div>
-					</li>
-				</ul>
+				<p>
+					Hieronder zijn een paar van mijn recente werken te vinden. Tussen deze selectie zijn werken van zowel school als eigen projecten te vinden.
+				</p>
 			</article>
+			<div id="showPrevious">
+				<i class="fa fa-angle-left animated pulse"></i>
+			</div>
+			<div id="showNext">
+				<i class="fa fa-angle-right animated pulse"></i>
+			</div>
+			<section class="animated">
+				<!-- This is where the content is placed with javascript -->
+			</section>
 		</section>
-
 		<section id="social">
 			<article>
-				<h2>Get social with me!</h2>
-				<ul>
-					<li class="animated">
-						<a href="https://www.facebook.com/sander.boer.33" target="_BLANK">
-							<i class="fa fa-facebook-square animated"></i>
-						</a>
-					</li>
-					<li class="animated">
-						<a href="https://github.com/xiduzo" target="_BLANK">
-							<i class="fa fa-github-square animated"></i>
-						</a>
-					</li>
-					<li class="animated">
-						<a href="https://www.linkedin.com/profile/view?id=373518495" target="_BLANK">
-							<i class="fa fa-linkedin-square animated"></i>
-						</a>
-					</li>
-				</ul>
-			</article>			
-		</section>
-
-		<footer>
-			<article>
+				<h2>Stay connected!</h2>
 				<p>
-					Photos by <a href="https://www.facebook.com/Chography/timeline" target="_BLANK">CHO Photography</a>
-				</p>
-				<p>
-					Copyright 2015 <a href="https://www.linkedin.com/profile/view?id=373518495" target="_BLANK">Sander Boer</a>
+					Get social with me, ik hou van menselijk contact!
 				</p>
 			</article>
+			<ul>
+				<li>
+					<a href="https://www.linkedin.com/profile/view?id=373518495" target="_BLANK">
+						<i class="fa fa-linkedin"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/xiduzo" target="_BLANK">
+						<i class="fa fa-github"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/sander.boer.33" target="_BLANK">
+						<i class="fa fa-facebook"></i>
+					</a>
+				</li>
+			</ul>
+		</section>
+		<footer>
+			<article>
+				<h2>Personlijk contact</h2>
+				<p>
+					Voor vragen ben ik altijd beschikbaar. Stuur gerust een mail of bel me op!
+				</p>
+			</article>
+			<ul>
+				<li>
+					<i class="fa fa-phone"></i>
+					06 36 54 88 80
+				</li>
+				<li>
+					<i class="fa fa-envelope"></i>
+					mail@sanderboer.nl
+				</li>
+			</ul>
+			<ul>
+				<li>
+					Photos by <a href="https://www.facebook.com/Chography/timeline" target="_BLANK">CHO Photography</a>
+				</li>
+				<li>
+					Copyright 2015 <a href="https://www.linkedin.com/profile/view?id=373518495" target="_BLANK">Sander Boer</a>
+				</li>
+			</ul>
 		</footer>
+		<nav></nav>
 	</div>
+	<script src="static/behaviour/extern/hammer.min.js"></script>
+	<script src="static/behaviour/extern/underscore.min.js"></script>
 
-	<!-- Extern Scripts -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="static/behaviour/aminations.js"></script>
 
-	<script src="static/behaviour/parallaxScroll.js"></script>
-
-	<script src="static/behaviour/hovers.js"></script>
+	<!-- Functioneel portfolio 
+	<script src="static/behaviour/portfolio.js"></script>-->
+	<!-- OO portfolio -->
+	<script src="static/behaviour/main.js"></script>
+	<script src="static/behaviour/jsonHandling.js"></script>
+	<script src="static/behaviour/items.js"></script>
 
 	<script>
-		// Animations on hover \\
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		// items
-		$("ul li").hover(function(){
-			$(this).find('img').toggleClass('pulse');
-			setTimeout(function(){
-			 	$(this).find('img').toggleClass('pulse');
-			}, 1000);
-		});
-
-		$("#portfolio ul li").click(function(){
-
-			var parentSection = $(this).parent().parent().parent();
-
-
-			if($(this).hasClass('active')) {
-				parentSection.find("li").each(function(){
-					$(this).show();
-				});
-			} else {
-				parentSection.find("li").each(function(){
-					$(this).hide();
-				});
-				$(this).show();
-			}
-
-
-			$(this).toggleClass("active");
-
-			$(this).find('img').toggleClass("slideInLeft");
-			$(this).find('h3').toggleClass("slideInRight");
-			$(this).find('div').toggleClass("slideInUp");
-			
-
-		});
-
+		ga('create', 'UA-41705266-3', 'auto');
+		ga('send', 'pageview');
 	</script>
-
 </body>
 
 </html>

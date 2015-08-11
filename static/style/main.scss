@@ -1,248 +1,426 @@
 // --- Imports ---------------------------------------------------------------
-// Google font: Roboto
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,300,400,500);
 
-// Google font: Lato
 @import url(http://fonts.googleapis.com/css?family=Lato:300,700,900);
 
-// Animations
-@import "animate.css";
+@import url(animate.css);
 
-// media queries
-@import "_media-queries.scss";
-
-//@import "tablet.scss";
-//@import "desktop.scss";
-
-// --- variables ---------------------------------------------------------------
-// grid variables
-$grid-columns: 12;
-$grid-max-width: 65em;
-
-// breakpoints
-$mq-mobile: 768px;
-$mq-tablet: 1024px;
-
-$res-collection: 320, 480, 768, 1024, 1280, 1680;
-$orientation-collection: all, portrait, landscape;
-$hdpi-collection: 1, 2;
-$hdtv-collection: "720p", "1080", "2K", "4K";
-
-// Color variables
-$black: rgb(14, 14, 14);
-$blue: rgb(65, 131, 215);
-
-// --- building the grid -------------------------------------------------------
-@for $i from 1 through $grid-columns {
-    .column-#{$i} {
-        width: 100% / $grid-columns * $i;
-        margin: 1em 0.7% * $i 1em 0.7% * $i;
-    }
-}
-
-// --- image shapes ------------------------------------------------------------
-.imageShape {
+// --- extends ---------------------------------------------------------------
+.imageShape, body #wrapper section img, body #wrapper section article ul li a i {
     -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
+// --- variables ---------------------------------------------------------------
+// Color variables
+$black: rgb(14, 14, 14);
+
+// breakpoints
+$break-small: 672px;
+$break-large: 1024px;
+
+// --- mixins ------------------------------------------------------------------
+@mixin respond-to($media) {
+    @if $media == handhelds {
+        @media only screen and (max-width: $break-small) {
+            @content;
+        }
+    }
+    @else if $media == medium-screens {
+        @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) {
+            @content;
+        }
+    }
+    @else if $media == wide-screens {
+        @media only screen and (min-width: $break-large) {
+            @content;
+        }
+    }
+}
+
+// --- styling -----------------------------------------------------------------
 * {
     margin: 0;
     padding: 0;
     font-size: 1em;
-    line-height: 1.6em;
+    line-height: 1.563em;
     text-decoration: none;
     list-style: none;
-    font-family: 'Roboto';
-    font-weight: 400;
     color: $black;
+    font-family: 'Roboto';
+    font-weight: 300;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lato';
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 2em;
+    letter-spacing: 0.2em;
+}
+
+h3 {
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: .1em;
 }
 
 body {
-    width: 100%;
     #wrapper {
-        width: 100%;
-        background-color: rgb(236, 240, 241);
         header {
-            background: url(../images/header-bg.jpg);
-            height: 65vh;
+            height: 100vh;
+            background-image: url("../images/header-bg.jpg");
             background-size: cover;
-            text-align: center;
-            padding: 35vh 0 0 0;
+            img {
+                @extend .imageShape;
+                &.hidden {
+                    opacity: 0;
+                }
+                @include respond-to(handhelds) {
+                    width: 30vw;
+                    height: 30vw;
+                    margin: 20vh 0 0 35vw;
+                }
+
+                @include respond-to(medium-screens) {
+                    width: 25vw;
+                    height: 25vw;
+                    margin: 20vh 0 0 37.5vw;
+                }
+
+                @include respond-to(wide-screens) {
+                    width: 20vw;
+                    height: 20vw;
+                    margin: 20vh 0 0 40vw;
+                }
+            }
             h1 {
-                font-family: 'Lato';
                 color: white;
-                letter-spacing: .2em;
-                background-color: rgba(0, 0, 0, 0.5);
-                padding: .5em 0 0.75em 0;
-                font-size: 3em;
+                text-align: center;
+                background-color: rgba(14, 14, 14, 0.5);
+                margin: 5vh 0 0 0;
+                padding: 4vh 0 4vh 0;
                 font-weight: 900;
+                font-size: 1.5em;
+                letter-spacing: .2em;
                 span {
-                    letter-spacing: .1em;
-                    font-size: .4em;
                     color: white;
-                    display: block;
-                    font-weight: 100;
+                    display: inherit;
+                    font-size: .7em;
+                    letter-spacing: normal;
                 }
             }
         }
         section {
-            width: 100%;
-            img {
-                @extend .imageShape;
-                width: 10em;
-                height: 10em;
-                display: block;
-                margin: auto;
-            }
+            padding: 3em 0 3em 0;
             article {
+                width: 80%;
                 margin: auto;
                 text-align: center;
+                padding: 1em 1em 1em 1em;
                 h2 {
-                    text-align: center;
-                    font-size: 2em;
-                    font-weight: 300;
-                    font-family: 'Lato';
-                    margin: 0 0 1em 0;
                     color: white;
-                    padding: 1.5em 0 1.5em 0;
                 }
                 p {
-                    @extend .column-6;
-                    margin: auto;
-                    font-weight: 300;
-                    letter-spacing: .1em;
-                    padding: 1em 0 0 0;
+                    color: white;
                 }
+            }
+            &#signature {
+                background-color: rgb(82, 179, 217);
                 ul {
+                    margin: 1em 0 0 0;
                     li {
-                        @extend .column-2;
                         display: inline-block;
+                        text-align: center;
                         vertical-align: top;
-                        img {
-                            margin: auto;
+                        @include respond-to(handhelds) {
+                            width: 100vw;
                         }
-                        h3 {
-                            text-align: center;
-                            font-weight: 300;
+
+                        @include respond-to(medium-screens) {
+                            width: 49vw;
                         }
-                        div {
-                            display: none;
+
+                        @include respond-to(wide-screens) {
+                            width: 32vw;
                         }
-                        a {
+
+                        article {
                             i {
+                                color: white;
+                                font-size: 3em;
+                                margin: 0 0 .3em 0;
+                                background-color: black;
                                 @extend .imageShape;
-                                font-size: 5em;
-                                opacity: .5;
-                                &.fa-facebook-square {
-                                    color: rgb(60, 90, 153);
+                                padding: 1em;
+                            }
+                            h3 {
+                                padding: .2em 0 .2em 0;
+                                color: white;
+                            }
+                            p {
+                                width: 80%;
+                                color: white;
+                                margin: auto;
+                                @include respond-to(handhelds) {
+                                    width: 100%;
                                 }
-                                &.fa-google-plus-square {
-                                    color: rgb(220, 74, 56);
+
+                                @include respond-to(medium-screens) {
+                                    width: 90%;
                                 }
-                                &.fa-linkedin-square {
-                                    color: rgb(2, 116, 179);
-                                }
-                                &:hover {
-                                    opacity: 1;
+
+                                @include respond-to(wide-screens) {
+                                    width: 80%;
                                 }
                             }
                         }
                     }
                 }
             }
-            &#about {
-                h2 {
-                    color: $black;
-                    margin: 0 0 0 0;
-                }
-            }
-            &#skills {
-                h2 {
-                    background: url(../images/skills-bg.jpg);
-                    background-size: cover;
-                    background-position: 0 0;
-                }
-            }
             &#portfolio {
-                h2 {
-                    background: url(../images/portfolio-bg.jpg);
-                    background-size: cover;
-                    background-position: 0 19em;
-                }
-                ul {
-                    li {
-                        &:hover {
-                            cursor: pointer;
+                background-color: rgb(210, 77, 87);
+                div {
+                    position: absolute;
+                    z-index: 2;
+                    i {
+                        @extend .imageShape;
+                        color: white;
+                        background-color: rgba(14, 14, 14, 0.5);
+                        font-size: 1.3em;
+                        position: relative;
+                        @include respond-to(handhelds) {
+                            top: 6vh;
                         }
-                        &.active {
+
+                        @include respond-to(medium-screens) {
+                            top: 18vw;
+                        }
+
+                        @include respond-to(wide-screens) {
+                            top: 30vh;
+                        }
+
+                        &.fa-angle-left {
+                            padding: 1em 1.2em 1em 1em;
+                            left: 1vw;
+                        }
+                        &.fa-angle-right {
+                            padding: 1em 1em 1em 1.2em;
+                            @include respond-to(handhelds) {
+                                left: 82vw;
+                            }
+
+                            @include respond-to(medium-screens) {
+                                left: 89vw;
+                            }
+
+                            @include respond-to(wide-screens) {
+                                left: 94vw;
+                            }
+                        }
+                    }
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                section {
+                    padding: 5vw 6vw 0 6vw;
+                    min-height: 50vh;
+                    img {
+                        @include respond-to(handhelds) {
+                            width: 30vw;
+                            height: 30vw;
+                            margin: 0 0 0 30vw;
+                        }
+
+                        @include respond-to(medium-screens) {
+                            width: 27.5vw;
+                            height: 27.5vw;
+                            margin: 5em 2em 5em 3em;
+                            float: left;
+                        }
+
+                        @include respond-to(wide-screens) {
+                            width: 25vw;
+                            height: 25vw;
+                            margin: 0 7em 5em 3em;
+                            float: left;
+                        }
+                    }
+                    h3 {
+                        color: white;
+                        @include respond-to(handhelds) {
                             width: 100%;
-                            img {
-                                width: 30em;
-                                height: 30em;
-                                float: left;
-                            }
-                            h3, div, p {
-                                width: 50%;
-                                float: right;
-                            }
-                            h3 {
-                                font-size: 2em;
-                                font-weight: 800;
-                                font-family: 'Lato';
-                                margin: 0 0 1em 0;
-                            }
-                            div {
-                                display: block;
-                                aside, p {
-                                    width: 100%;
-                                }
-                                aside {
-                                    font-weight: 300;
-                                    display: inline;
-                                    &:not(:last-of-type):after {
-                                        content: ' / ';
-                                    }
-                                }
-                                p {
-                                    font-weight: 400;
-                                    padding: 0 2em 0 2em;
-                                }
-                                a {
-                                    display: inherit;
-                                    i {
-                                        margin: .5em 0 0 0;
-                                        background-color: $blue;
-                                        color: white;
-                                    }
-                                }
-                            }
+                            text-align: center;
+                        }
+
+                        @include respond-to(medium-screens) {
+                            width: 49%;
+                            vertical-align: top;
+                            display: inline-block;
+                        }
+
+                        @include respond-to(wide-screens) {
+                            width: 49%;
+                            vertical-align: top;
+                            display: inline-block;
+                        }
+                    }
+                    p {
+                        color: white;
+                        padding: .2em 0 .2em 0;
+                        @include respond-to(handhelds) {
+                            width: 100%;
+                        }
+
+                        @include respond-to(medium-screens) {
+                            width: 50%;
+                            float: left;
+                        }
+
+                        @include respond-to(wide-screens) {
+                            display: inline-block;
+                            width: 50%;
+                        }
+                    }
+                    a {
+                        display: inline-block;
+                        background-color: rgb(236, 236, 236);
+                        padding: 1em 1em 1em 1em;
+                        text-align: center;
+                        margin: 1em 1em 0 0;
+                        font-weight: 400;
+                        @include respond-to(handhelds) {
+                            width: 89%;
+                        }
+
+                        @include respond-to(medium-screens) {
+                            width: 89%;
+                        }
+
+                        @include respond-to(wide-screens) {
+                            width: 20%;
+                        }
+
+                        &:hover {
+                            background-color: rgb(46, 204, 113);
+                            color: white;
                         }
                     }
                 }
             }
             &#social {
-                h2 {
-                    background: url(../images/social-bg.jpg);
-                    background-size: cover;
-                    background-position: 0 13em;
+                background-image: url("../images/social-bg.jpg");
+                background-size: cover;
+                @include respond-to(handhelds) {}
+
+                @include respond-to(medium-screens) {}
+
+                @include respond-to(wide-screens) {
+                    background-position-y: 34em;
                 }
-            }
-            &:not(:last-of-type) {
-                padding: 0 0 3em 0;
+
+                ul {
+                    @include respond-to(handhelds) {
+                        margin: 0 0 0 0;
+                    }
+
+                    @include respond-to(medium-screens) {
+                        margin: 1em 0 0 0;
+                    }
+
+                    @include respond-to(wide-screens) {
+                        margin: 1em 0 0 0;
+                    }
+
+                    li {
+                        width: 32%;
+                        display: inline-block;
+                        text-align: center;
+                        vertical-align: top;
+                        a {
+                            i {
+                                color: white;
+                                margin: 0 0 .3em 0;
+                                background-color: black;
+                                @extend .imageShape;
+                                padding: 1em;
+                                @include respond-to(handhelds) {
+                                    font-size: 2em;
+                                }
+
+                                @include respond-to(medium-screens) {
+                                    font-size: 2.5em;
+                                }
+
+                                @include respond-to(wide-screens) {
+                                    font-size: 3em;
+                                }
+
+                                &.fa-linkedin {
+                                    color: rgb(60, 90, 153);
+                                }
+                                &.fa-github {
+                                    color: rgb(220, 74, 56);
+                                }
+                                &.fa-facebook {
+                                    color: rgb(2, 116, 179);
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         footer {
-            width: 100%;
-            background-color: $blue;
-            margin: 3em 0 0 0;
+            padding: 3em 0 3em 0;
+            background-color: rgb(46, 204, 113);
             article {
+                margin: auto;
                 text-align: center;
-                padding: .5em 0 .5em 0;
+                padding: 1em 1em 1em 1em;
+                @include respond-to(handhelds) {
+                    width: 90%;
+                }
+
+                @include respond-to(medium-screens) {
+                    width: 90%;
+                }
+
+                @include respond-to(wide-screens) {
+                    width: 80%;
+                }
+
+                h2 {
+                    color: white;
+                }
                 p {
-                    @extend .column-5;
-                    display: inline-block;
-                    a {
+                    color: white;
+                }
+            }
+            ul {
+                display: inline-block;
+                text-align: center;
+                margin: 1em 0 0 0;
+                @include respond-to(handhelds) {
+                    width: 100vw;
+                }
+
+                @include respond-to(medium-screens) {
+                    width: 49vw;
+                }
+
+                @include respond-to(wide-screens) {
+                    width: 49vw;
+                }
+
+                li {
+                    color: white;
+                    padding: .2em 0 .2em 0;
+                    i {
                         color: white;
                     }
                 }
