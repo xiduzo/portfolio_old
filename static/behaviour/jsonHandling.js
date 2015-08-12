@@ -19,21 +19,11 @@
 		},
 		// Get the items
 		getItems: function(filter) {
-			// Try catch method for getting the json needed
-			try {
-				portfolioItems = localStorage.getItem("portfolioItems");
-				throw _.isEmpty(portfolioItems) ? "No {local storage} available" : "Getting items from {local storage}";
-			} catch(err) {
-				console.log(err);
-			} finally {
-				portfolio.jsonHandling.getJson("GET", "http://sanderboer.nl/portfolio.json", function(response) {
-					localStorage.setItem("portfolioItems", response);
-					console.log('New JSON stored in {local storage}');
-				});
-			}
-
-			portfolio.items.animate();
-			portfolio.items.displayItem(JSON.parse(portfolioItems));
+			portfolio.jsonHandling.getJson("GET", "http://sanderboer.nl/portfolio.json", function(response) {
+				localStorage.setItem("portfolioItems", response);
+				portfolio.items.animate();
+				portfolio.items.displayItem(JSON.parse(localStorage.getItem("portfolioItems")));
+			});
 		}
 	}	
 
